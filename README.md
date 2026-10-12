@@ -49,11 +49,6 @@ DB_USER=root
 DB_PASSWORD=your_actual_mysql_password
 DB_NAME=toyverse_db
 DB_CONNECTION_LIMIT=10
-
-# Admin Account Credentials for Seeding
-ADMIN_NAME=Store Admin
-ADMIN_EMAIL=admin@toyverse.demo
-ADMIN_PASSWORD=admin123
 ```
 
 ---
@@ -86,19 +81,7 @@ mysql -u root -p < database/toyverse_db_dump.sql
 
 ---
 
-## 4. Seeding Initial Admin Account
-
-After importing the database dump, seed the store administrator account:
-
-```bash
-npm run seed
-```
-
-This script safely reads `ADMIN_EMAIL` and `ADMIN_PASSWORD` from your `.env`, verifies whether an admin already exists in MySQL, and securely hashes the password with `bcrypt` (10 rounds).
-
----
-
-## 5. Running the Application
+## 4. Running the Application
 
 ### Development Mode (with hot-reloading):
 ```bash
@@ -114,7 +97,7 @@ npm start
 
 ---
 
-## 6. Running Tests
+## 5. Running Tests
 
 Run the test suite using Vitest and Supertest:
 
@@ -129,7 +112,7 @@ npm run test:watch
 
 ---
 
-## 7. Interactive API Documentation (Swagger UI)
+## 6. Interactive API Documentation (Swagger UI)
 
 Interactive OpenAPI 3.0 documentation is available when the server is running:
 
@@ -142,7 +125,7 @@ Features:
 
 ---
 
-## 8. API Endpoint Overview
+## 7. API Endpoint Overview
 
 | Module | Method | Endpoint | Description | Auth |
 |---|---|---|---|---|
